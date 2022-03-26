@@ -5,22 +5,22 @@ LET, variables limitadas al alcnce del bloque donde se definen
 CONST, variables inmutables (globales?)
 
 */
-
-var saludo='Hola, soy un var'
-if(saludo){
-    var saludo='HOLA elfo var'
-    console.log(saludo)
+console.log('Var VS Let')
+var saludoVar='Hola, soy un var'
+if(saludoVar){
+    var saludoVar='HOLA elfo var'
+    console.log(saludoVar)
 }
-console.log(saludo) //ambos var son iguales
+console.log(saludoVar) //ambos var son iguales
 
 
-let nombre= 'Hola, soy un let'
-if(nombre){
-    let nombre='Anatola'
-    console.log(nombre)
+let saludoLet= 'Hola, soy un let'
+if(saludoLet){
+    let saludoLet='Ahora soy otro let'
+    console.log(saludoLet)
 }
 
-console.log(nombre) //ambos nombres seran distintos, por la limitacion del let.
+console.log(saludoLet) //ambos nombres seran distintos, por la limitacion del let.
 
 const pi=3.14
 //pi=50 // tira error ya que no puede setearse nuevamente su valor.
@@ -68,3 +68,68 @@ console.log('My name is:'+ name+' and I am '+old+' years old.' )
 
 //interpolacion de texto
 console.log(`My name is: ${name} and I am ${old} years old`)
+
+//algunos metodos
+
+console.log(name.toLocaleUpperCase()) //toLowerCase()
+console.log(name+' tiene'+name.length+' letras') 
+
+
+//OPERADORES
+//https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#operadores
+
+//operadores aritmeticos:
+var a= 2
+var resolucion
+console.log('operadores aritmeticos')
+//+,-,*,/,%,**, ++, --
+//abreviado:
+resolucion= a+1
+console.log('a=a+1:'+ resolucion)
+resolucion= a+=1
+console.log('a+=1:'+ resolucion)
+resolucion= a**=3
+console.log('a**=3:'+ resolucion)
+console.log('a++:'+ resolucion++ )
+console.log('a--:'+ a--)
+
+
+
+
+
+//operadores de comparacion: ==,!=,===,!==,>,>=,<,<=
+var a2='2'
+var a3=3 
+var test
+console.log('Operadores de comparacion:')
+test= a==a2
+console.log('a==a2: '+ test)//true a pesar de que uno es strign y el otro number.
+test= a === a2
+console.log("a === a2: "+ test) // false:el triple igual compara no solo el valor sino tambien el tipo de dato.
+test= a != a2
+console.log("a != a2: "+ test )//false
+test= a !== a2
+console.log("a !== a2: "+ test) //true
+test= a >= 3
+console.log('a >= 3: '+ test) //false
+
+
+// Operadores Logicos &&, ||, ! (not)
+var v= true
+var f= false
+console.log('Operadores logicos')
+test= v && f
+console.log('v && f'+test) //false
+test=v || f
+console.log('v || f'+test) //true
+test=!f
+
+console.log('!f: '+test) //true
+
+//operadores ternario: condicion? true:false
+console.log('Operador ternario: ')
+console.log(' condicion? true:false')
+console.log('var res=edad>=18? Es mayor de edad:Es menor de edad...')
+var edad= 19
+var res= edad>=18? console.log("Es mayor de edad"): console.log("Es menor de edad")
+
