@@ -133,3 +133,60 @@ console.log('var res=edad>=18? Es mayor de edad:Es menor de edad...')
 var edad= 19
 var res= edad>=18? console.log("Es mayor de edad"): console.log("Es menor de edad")
 
+// FUNCIONES
+//crear
+function saludo(name, a, b){
+    console.log('Hola '+ name +' el resultado de la suma es:')
+    return a + b
+}
+
+//imprimir
+console.log(saludo(name, 1,1))
+saludo(name,1,1) //no devuelve el return
+
+//ARROWS FUNCTION
+
+var acceso=true
+
+/* Manera 1
+
+var accesoUser= function(a){
+    return a
+}
+*/
+//Manera dos o simplificada
+
+//var accesoUser =a =>a
+
+//sin parametros:
+
+//var accesoUser=()=> false
+
+//mas de un parametro
+
+var accesoUser= (a,name)=>{
+    console.log('running user '+ name)
+    return a
+}
+
+accesoUser(acceso, 'Barush')==true
+? console.log('User permitted')
+:console.log('User denied')
+
+function saludo(name, a, b){
+    console.log('Hola '+ name +' el resultado de la suma es:')
+    return a + b
+}
+
+//misma funcion de saludo pero en arrow.
+var saludo2 = (name, a,b) => console.log('Hola '+name+' el resultado es:'+(a+b))
+
+saludo2('Ashanti',1,1)
+
+
+
+
+
+
+
+
