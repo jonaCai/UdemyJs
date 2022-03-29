@@ -81,11 +81,12 @@ console.log(typeof verdadero) // nos devuelve el tipo de dato de la variable
 
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String
 //concatenacion de texto
+console.log("VARIABLES STRINGS Y SUS METODOS")
 console.log("CONCATENACION DE TEXTO:")
 var name='jonh'
 var old=28
 
-console.log('My name is:'+ name+' and I am '+old+' years old. Se concatenaron als variables name y old' )
+console.log('My name is:'+ name+' and I am '+old+' years old. Se concatenaron las variables name y old mediante +' )
 
 
 //interpolacion de texto
@@ -93,7 +94,10 @@ console.log(`My name is: ${name} and I am ${old} years old. Se concatenaron las 
 
 //algunos metodos
 console.log("metodo toLocaleUpperCase: ")
+console.log(name.toLowerCase())
 console.log(name.toLocaleUpperCase()) //toLowerCase()
+
+
 console.log("metodo length: ")
 console.log(name+' tiene'+name.length+' letras') 
 
@@ -107,7 +111,8 @@ console.log(name+' tiene'+name.length+' letras')
 //
 var a= 2
 var resolucion
-console.log('operadores aritmeticos')
+console.log('')
+console.log('OPERADORES ARITMETICOS')
 //+,-,*,/,%,**, ++, --
 //abreviado:
 resolucion= a+1
@@ -125,7 +130,9 @@ console.log('a--:'+ a--)
 var a2='2'
 var a3=3 
 var test
-console.log('Operadores de comparacion:')
+console.log('')
+console.log('OPERADORES DE COMPARACION:')
+console.log(`a=2, a2=$'2'y a3=3`)
 test= a==a2
 console.log('a==a2: '+ test)//true a pesar de que uno es strign y el otro number.
 test= a === a2
@@ -142,6 +149,7 @@ console.log('a >= 3: '+ test) //false
 //
 var v= true
 var f= false
+console.log('')
 console.log('Operadores logicos')
 test= v && f
 console.log('v && f'+test) //false
@@ -152,16 +160,19 @@ test=!f
 console.log('!f: '+test) //true
 
 //operadores ternario: condicion? true:false
-console.log('Operador ternario: ')
+console.log('')
+console.log('Operadores ternario: ')
 console.log(' condicion? true:false')
 console.log('var res=edad>=18? Es mayor de edad:Es menor de edad...')
+console.log('test con edad igual a 19:')
 var edad= 19
 var res= edad>=18? console.log("Es mayor de edad"): console.log("Es menor de edad")
 
 //
 // FUNCIONES
 //crear
-
+console.log()
+console.log('FUNCIONES')
 function saludo(name, a, b){
     console.log('Hola '+ name +', 1 + 1 es:')
     return a+b
@@ -175,30 +186,49 @@ saludo(name,1,1) //no devuelve el return
 //ARROWS FUNCTION --}->
 //
 
+console.log("Arrow FUNCTION")
 var acceso=true
-
-/* Manera 1
-
-var accesoUser= function(a){
+console.log('acceso= true')
+console.log('Manera 1') 
+console.log(`var accesoUser1= function(a){
+    return a
+}`)
+var accesoUser1= function(a){
     return a
 }
-*/
-//Manera dos o simplificada
+console.log('resultado: '+ accesoUser1(acceso))
 
-//var accesoUser =a =>a
+console.log()
+console.log('Manera dos:')
+
+console.log('var accesoUser2 =a =>a')
+var accesoUser2 = a=>a
+console.log('resultado: '+accesoUser2(acceso) )
 
 //sin parametros:
 
-//var accesoUser=()=> false
-
+console.log('Manera tres sin parametros')
+console.log('var accesoUser3=() => false')
+var accesoUser3=()=> false
+console.log('resultado: '+ accesoUser3())
 //mas de un parametro
-
-var accesoUser= (a,name)=>{
+console.log('Manera cuatro, mas de un parametro:')
+console.log(`var accesoUser4=(a,name)=>{
+    console.log($'running user'+ name
+    return a)
+}`)
+var accesoUser4= (a,name)=>{
     console.log('running user '+ name)
     return a
 }
+console.log('llamada...:'+` 
+accesoUser4(acceso, 'Barush')==true
+? console.log('User permitted')
+:console.log('User denied')`)
 
-accesoUser(acceso, 'Barush')==true
+console.log('resultado...: ')
+
+accesoUser4(acceso, 'Barush')==true
 ? console.log('User permitted')
 :console.log('User denied')
 
@@ -209,24 +239,50 @@ function saludo(name, a, b){
 }
 */
 //misma funcion de saludo pero en arrow.
+console.log()
+console.log('Funcion saludar simplificada: ')
+console.log(`var saludo2 = (name, a,b) => console.log('Hola '+name+' el resultado es:'+(a+b))`)
 var saludo2 = (name, a,b) => console.log('Hola '+name+' el resultado es:'+(a+b))
-
+console.log(`saludo2($'Ashanti',1,1)`)
+console.log('resultado: ')
 saludo2('Ashanti',1,1)
+
 
 //
 // FUNCIONES NUMERICAS
 //
 //isInteger
+
+console.log('FUNCIONES NUMERICAS')
+console.log('Number.isInteger()')
 var num = 'cincuenta'
 var res= Number.isInteger(num)
 
+console.log(`var num= 'cincuenta'
+var res= Number.isInteger(num)
+console.log(res)`)
+console.log('resultado: ')
 console.log(res)
 //parseInt
+console.log()
+console.log('parseInt')
+
+console.log(`var num1=25.25
+var res1=Number.parseInt(num1)
+console.log(res1)`)
+console.log('resultado: ')
 var num1=25.25
 var res1=Number.parseInt(num1)
 
 console.log(res1)
 //parseFloat()-toFixed(aca va el numero de decimales)
+
+console.log('parseFloat().toFixed()')
+console.log(`var num2=28.2554159
+var res2=Number.parseFloat(num2).toFixed(3)
+
+console.log(res2)`)
+console.log('resultado: ')
 var num2=28.2554159
 var res2=Number.parseFloat(num2).toFixed(3)
 
@@ -239,6 +295,25 @@ console.log(res2)
 
 //definicion
 
+console.log('OBJETOS')
+console.log('Definicion:')
+console.log(`var user="almirante"
+var miObjeto ={
+    nombre : "jonh",
+    tema: "OBJETOS",
+    anio : 2020,
+    mes :12,
+    importante: true,
+    texto: "usuario: "+user,
+    miFuncion: (an,me)=>an/me,
+    miOtroObjeto:{
+        nombre:"Otro Objeto",
+        apellido: "Objetero",
+    },
+    fecha: new Date()
+
+
+}`)
 var user="almirante"
 var miObjeto ={
     //clave : valor
@@ -259,16 +334,107 @@ var miObjeto ={
 
 
 }
-
+console.log('llamada:')
+console.log(`console.log(miObjeto.tema)
+console.log(miObjeto.nombre+ " " +miObjeto.texto+ " "+ miObjeto.miFuncion(miObjeto.anio,miObjeto.mes))
+`)
+console.log('resultado:')
 console.log(miObjeto.tema)
 console.log(miObjeto.nombre+ " " +miObjeto.texto+ " "+ miObjeto.miFuncion(miObjeto.anio,miObjeto.mes))
 
 
 //desestructuracion de objetos
 //sirve para acceder a una pripiedad del objeto sin poner el nombre del objeto
+console.log('DESESTRUCTURACION DE OBJETOS')
+console.log('sirve para acceder a una pripiedad del objeto sin poner el nombre del objeto')
+console.log(`var {nombre}=miObjeto.miOtroObjeto
+console.log(nombre)
+
+var otraFuncion =({texto})=>texto
+
+console.log(otraFuncion(miObjeto))`)
+console.log('resultado: ')
+
 var {nombre}=miObjeto.miOtroObjeto
 console.log(nombre)
 
 var otraFuncion =({texto})=>texto
 
 console.log(otraFuncion(miObjeto))
+
+console.log()
+console.log('ARRAYS')
+console.log('Pueden contener cualquier tipo de datos:')
+console.log(`var miArray1= ["Jonh array", 2020, 34.9, true]
+console.log(miArray1[2])`)
+console.log('resultado:')
+var miArray1= ["Jonh array", 2020, 34.9, true]
+console.log(miArray1[2])
+
+console.log()
+console.log(`Array dentro de un array:
+var miArray2= ["Jonh array", 2020, 34.9, true,["otro array", "caray",10]]
+console.log(miArray2[4],[1])`)
+console.log('resultado:')
+var miArray2= ["Jonh array", 2020, 34.9, true,["otro arrya", "caray",10]]
+console.log(miArray2[4][1])
+
+console.log()
+console.log(`Funciones dentro de un array`)
+console.log(`var miArray2= ["Jonh array", 2020, 34.9, true,["otro arrya", "caray",10], accesoUser1(acceso)]
+console.log(miArray2[5])`)
+console.log('Resultado:')
+
+var miArray2= ["Jonh array", 2020, 34.9, true,["otro arrya", "caray",10], accesoUser1(acceso)]
+console.log(miArray2[5])
+
+console.log('Los array tambien pueden tener objetos. A su vez un objeto puede tener otro array con objetos dentro..')
+console.log()
+console.log(`
+var vehiculos={
+    ruedas:"",
+    puertas:"",
+    marcas:[
+        Volwsbagen={
+            modelos:["Gol","Polo","otros"]
+        },
+        Ford={
+            modelos:["Toro","K","otros"]}
+    ]
+}
+`)
+console.log('console.log(vehiculos.marcas[0].modelos[0]) :')
+var vehiculos={
+    ruedas:"",
+    puertas:"",
+    marcas:[
+        Volwsbagen={
+            modelos:["Gol","Polo","otros"]
+        },
+        Ford={
+            modelos:["Toro","K","otros"]}
+    ]
+}
+
+console.log(vehiculos.marcas[0].modelos[0])
+
+//
+//JSON
+//
+
+console.log('JSON Es un formato para el intercambio de datos y un subconjunto de los objetos')
+console.log("Es el formato mas estandarizado en la industria")
+console.log(`
+var miObjetoJason={
+    nombre:"jonh"
+
+}
+
+console.log(JSON.stringify(miObjetoJason))
+ resultado:`)
+var miObjetoJason={
+    nombre:"jonh"
+
+}
+
+console.log(JSON.stringify(miObjetoJason))
