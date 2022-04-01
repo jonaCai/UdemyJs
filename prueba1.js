@@ -438,3 +438,114 @@ var miObjetoJason={
 }
 
 console.log(JSON.stringify(miObjetoJason))
+
+//
+//IF ELSE
+//
+console.log()
+console.log("If else, la variableIF es verdadera?:")
+var variableIf = true
+
+if (variableIf){
+    console.log("True")
+}else{
+    console.log("False")
+}
+
+console.log()
+console.log("La variable edad es mayór a 18?")
+var edad=17
+if(edad >=18 && edad <=30){
+    console.log("sí, es de mediana edad ("+edad+").")
+}else if(edad <18){
+    console.log("no, es menor de edad("+edad+").")
+}else if(edade>30){
+    console.log("Sí, es ul adulto con muchas responsabilidades("+edad+").")
+}
+
+
+//
+//
+//
+
+console.log()
+console.log("SWiTCH")
+var opcion="mameluco"
+console.log("La variable opcion ingresa a?: ")
+switch (opcion){
+    case 1:
+        console.log("Menu de usuario")
+        break;
+    case 2:
+        console.log("Menu administrativo")
+        break;
+    case 3:
+        console.log("Configuración")
+        break;
+    default:
+        console.log("Debe ingresar una opcion del 1 al 3. NO: "+`"${opcion}"`)
+        break;
+}
+
+ //
+ //for
+ //
+
+var numeroMultiplicar=5
+ console.log("Ciclo For, Tabla de multiplicar del numero:"+numeroMultiplicar)
+
+ for (i=1;i<=10;i++){
+    
+    console.log(`${i} * ${numeroMultiplicar} = ${i*numeroMultiplicar}`)
+
+
+ }
+
+ var numerosPrimos=[2,3,5,7,11,"13..."]
+ console.log("Foreach, Numeros primos: ")
+ numerosPrimos.forEach((element,a) => {
+     console.log((a+1)+": "+element)
+     
+    })
+
+
+//
+//DO-WHILE
+//
+var ovejas="leones"
+var test=false
+console.log("Do{}while()...Hacer hasta que las ovejas sean leones")
+
+do{
+    if(ovejas="leones"){
+        test=true
+        console.log("Las ovejas son leones")
+    }else{
+        console.log("infinitus")
+    }
+
+}while(test==false)
+test=false
+console.log()
+console.log("while(){}...Hacer hasta que las ovejas sean leones")
+while(test==false){
+    if(ovejas="leones"){
+        test=true
+        console.log("Las ovejas son leones")
+    }else{
+        console.log("infinitus")
+    }
+}
+
+//
+//continue
+//
+console.log()
+console.log('{CONTINUE} Contar del 1 al 31 omitiendo numeros pares:')
+
+for(b=1;b<=31; b++){
+    if(b%2==0){
+        continue
+    }
+    console.log(b)
+}
